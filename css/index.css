@@ -69,6 +69,10 @@ logo{
 footer{
     color: #ffeba7;
 }
+.delete-link-style{
+    text-decoration: none !important;
+    color: white;
+}
 @media (prefers-color-scheme: light){
     logo{
         filter:
@@ -88,6 +92,9 @@ footer{
         color: transparent;
     }
     footer{
+        color: black;
+    }
+    .delete-link-style{
         color: black;
     }
 }
