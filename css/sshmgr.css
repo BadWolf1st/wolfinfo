@@ -1,0 +1,17 @@
+.biotext{
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-inline: 40px;
+    padding-block: 30px;
+    color: white;
+    font-size: large;
+}
+@media (prefers-color-scheme: light){
+    .biotext{
+        color: black;
+    }
+}
+
+.borders{
+    border-radius: 25px;
+}
