@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated with https://sitemap-xml.ru-->
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+  <url>
+    <loc>https://wolfinfo.ru/</loc>
+    <lastmod>2023-07-15T22:23:33+03:00</lastmod>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://wolfinfo.ru/logo/cropped-WolfInfoLogo-152x117.png</image:loc>
+      <image:caption>WolfInfo.ru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://wolfinfo.ru/buttons/cloud.png</image:loc>
+      <image:caption>WolfHost.ru Cloud</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://wolfinfo.ru/logo/sshmgrlogo.svg</image:loc>
+      <image:caption>SSH manager</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://wolfinfo.ru/sshmgr</loc>
+    <lastmod>2023-07-17T16:33:36+03:00</lastmod>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://wolfinfo.ru/buttons/russian-flag.jpg</image:loc>
+      <image:caption>Russian language</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://wolfinfo.ru/buttons/english-flag.jpg</image:loc>
+      <image:caption>English language</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://wolfinfo.ru/peoples/badwolf</loc>
+    <lastmod>2023-07-15T23:59:59+03:00</lastmod>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://wolfinfo.ru/buttons/telegram.svg</image:loc>
+      <image:caption>Telegram</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://wolfinfo.ru/buttons/mail_email_message_electronic_online_web_icon-icons.com_59986.svg</image:loc>
+      <image:caption>EMail</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://wolfinfo.ru/sshmgr/ru</loc>
+    <lastmod>2023-07-16T01:33:05+03:00</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://wolfinfo.ru/2023-07-16_00.57.38.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://wolfinfo.ru/sshmgr/en</loc>
+    <lastmod>2023-07-17T16:33:36+03:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wolfinfo.ru/peoples/lkotum</loc>
+    <lastmod>2023-07-15T23:59:59+03:00</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://wolfinfo.ru/buttons/github.svg</image:loc>
+      <image:caption>EMail</image:caption>
+    </image:image>
+  </url>
+</urlset>
