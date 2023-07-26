@@ -1,0 +1,4 @@
+User-agent: 
+Crawl-delay: 1
+Host: wolfinfo.ru
+Sitemap: https://wolfinfo.ru/sitemap.xml
