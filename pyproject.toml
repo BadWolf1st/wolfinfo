@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "wolfinfo5-back"
+version = "0.1.0"
+description = ""
+authors = ["Raskutin Sergey <115115085+BadWolf1st@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
