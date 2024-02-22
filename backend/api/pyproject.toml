@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "wolfinfo5-back"
+version = "0.1.0"
+description = ""
+authors = ["Raskutin Sergey <115115085+BadWolf1st@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+loguru = "^0.7.2"
+asyncpg = "^0.29.0"
+sqlalchemy = "^2.0.27"
+alembic = "^1.13.1"
+fastapi = {extras = ["all"], version = "^0.109.2"}
+fastapi-users = {extras = ["sqlalchemy"], version = "^12.1.3"}
+fastapi-cache2 = {extras = ["redis"], version = "^0.2.1"}
+python-dotenv = "^1.0.1"
+pydantic = {extras = ["dotenv"], version = "^2.6.1"}
+gunicorn = "^21.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

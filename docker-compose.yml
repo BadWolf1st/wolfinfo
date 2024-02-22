@@ -1,0 +1,55 @@
+version: "3"
+
+services:
+  api:
+    container_name: wolfapi
+    # restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend/api:/api
+    ports:
+      - 8000:8000
+    environment:
+      - DATABASE_URL=postgresql://postgres:BadGolf@db:5432/app
+      - BACKEND_CORS_ORIGINS=["http://localhost:3000","http://localhost:8000"]
+    depends_on:
+      - postrges
+      - redis
+    networks:
+      - default
+
+  postrges:
+    image: "postgres:16.2"
+    container_name: db
+    restart: always
+    ports:
+      - 5433:5432
+    volumes:
+      - app-db-data:/var/lib/postgresql/data/pgdata
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_SERVER=db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=BadGolf
+      - POSTGRES_DB=api
+    networks:
+      - default
+
+  redis:
+    image: "redis:alpine"
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379
+    networks:
+      - default
+
+volumes:
+  app-db-data:
+
+networks:
+  default:
+    external: true
+    name: wolfnet

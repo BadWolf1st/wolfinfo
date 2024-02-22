@@ -1,0 +1,94 @@
+# Configs
+config.prod.ini
+config.dev.ini
+
+# Byte-compiled, optimized, and DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Builds
+/build
+*/build
+*.so
+/dist
+/lib
+/lib-types
+/server
+
+# Cache
+.cache
+.pytest_cache/
+.webassets-cache
+.mypy_cache/
+
+# Code editor (IntelliJ & VSCode)
+*.iml
+*.ipr
+*.iws
+.idea/
+.classpath
+.project
+.settings/
+.vscode/
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Database-related
+*.sqlite3
+*.db
+postgres-data
+
+# Logs
+logs
+*.log
+
+# Distributions package
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pnpm-store/
+
+# Documentation
+/site
+docs/_build/
+
+# Dotenvs
+/.pnp
+.pnp.js
+.env
+env/
+ENV/
+env.bak/
+prod_env/
+dev_env/
+test_env/
+test.env
+dev.env
+prod.env
+.DS_Store
+.env.dev
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

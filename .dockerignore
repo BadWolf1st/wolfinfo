@@ -1,0 +1,12 @@
+.mypy_cache
+.pytest_cache
+__pycache__
+.gitignore
+.github
+.git
+*.md
+env
+.dockerignore
+Dockerfile
+docker-compose.yml
+README.md
