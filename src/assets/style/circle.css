@@ -1,0 +1,23 @@
+@import url("./index.css");
+
+.circle1 {
+	left: 200px;
+	top: 100px;
+	position: absolute;
+	background: #FFEBA7;
+	clip-path: circle(50%);
+	height: 130px;
+	width: 130px;
+	z-index: -1;
+}
+
+.circle2 {
+	position: absolute;
+	right: 300px;
+	bottom: 200px;
+	background: #FFEBA7;
+	clip-path: circle(50%);
+	height: 150px;
+	width: 150px;
+	z-index: -1;
+}

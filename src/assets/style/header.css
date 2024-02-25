@@ -1,0 +1,38 @@
+@import url("./index.css");
+
+header{
+	padding: 0px;
+	margin: 20px;
+	/* height: 112px; */
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+logo{
+	float: left;
+}
+
+image {
+	vertical-align: middle;
+}
+
+img{
+	height: 50px;
+}
+
+logo-text{
+	padding-left: 20px;
+	color: #FFEBA7;
+	font-family: Fregat;
+	font-size: 24px;
+	font-weight: 400;
+	vertical-align: middle;
+	display: inline-block;
+	width: max-content;
+}
+
+.invert {
+    filter: invert(1);
+}
+
