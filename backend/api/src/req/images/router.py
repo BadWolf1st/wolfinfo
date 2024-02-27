@@ -51,7 +51,7 @@ async def update_image(image_name: str, file: UploadFile, user: User = Depends(c
 	if file.content_type not in ['image/jpeg', 'image/png']:
 		raise HTTPException(status_code=status.HTTP_406_NOT_ACCEPTABLE,
 							detail="Only .jpeg, .jpg or .png  files allowed")
-	cntl.write(file, file.filename, no_check=True)
+	cntl.write(file, image_name, no_check=True)
 	await session.execute(update(Image).values(last_update_date=datetime.utcnow()).where(Image.name == image_name))
 
 @router.put("/id/{image_id}")
