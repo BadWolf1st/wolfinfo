@@ -1,12 +1,13 @@
 from src.libs.custom_exceptions import ConfigError
 import configparser
-import sys
+import sys, os
 
 class Config:
     def __init__(self, MODE: str = "DEV"):
         self.__config = configparser.ConfigParser()
         if MODE == "DEV":
-            path = sys.path[0] + "/src/config/config.dev.ini"
+            sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+            path = sys.path[-1] + "/config/config.dev.ini"
         elif MODE == "PROD":
             path = "/api/src/config/config.prod.ini"
         self.__config.read(path)
@@ -27,8 +28,8 @@ class Config:
         self.POSTGRES_DB = self.__config.get("DATABASE", "PG_DATABASE")
         if self.__config.get("SECRET", "SECRET_AUTH") is None:
             raise ConfigError("SECRET_AUTH is not set")
+        self.SECRET_AUTH = self.__config.get("SECRET", "SECRET_AUTH")
         if self.__config.get("REDIS", "REDIS_HOST") is None:
             raise ConfigError("REDIS_HOST is not set")
         self.REDIS_HOST = self.__config.get("REDIS", "REDIS_HOST")
-        self.SECRET_AUTH = self.__config
         self.SQLALCHEMY_DATABASE_URL = f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASS}@{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"

@@ -14,7 +14,8 @@ from src.req.auth.base_config import auth_backend, fastapi_users
 from src.req.auth.schemas import UserRead, UserCreate
 
 from src.req.main_inf.router import router as router_main_inf
-# from .images.router import router as router_images
+
+from src.req.images.router import router as router_images
 
 cfg = Config(MODE)
 
@@ -42,7 +43,6 @@ app.add_middleware(
 def read_root():
     return Response(status_code=status.HTTP_421_MISDIRECTED_REQUEST)
 
-
 app.include_router(
     fastapi_users.get_auth_router(auth_backend),
     prefix="/auth",
@@ -55,7 +55,7 @@ app.include_router(
 )
 
 app.include_router(router_main_inf)
-# app.include_router(router_images)
+app.include_router(router_images)
 
 
 @app.on_event("startup")

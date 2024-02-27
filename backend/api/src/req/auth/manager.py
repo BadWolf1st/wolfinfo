@@ -7,11 +7,11 @@ from src.req.auth.models import User
 from src.req.auth.utils import get_user_db
 
 from src.libs.config import Config
+from src.mode import MODE
 
-cfg = Config(MODE="DEV")
+cfg = Config(MODE)
 
 SECRET_AUTH = cfg.SECRET_AUTH
-
 
 class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
     reset_password_token_secret = SECRET_AUTH
@@ -25,6 +25,7 @@ class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
         user_create: schemas.UC,
         safe: bool = False,
         request: Optional[Request] = None,
+        role_id: int = 4,
     ) -> models.UP:
         await self.validate_password(user_create.password, user_create)
 
@@ -39,14 +40,13 @@ class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
         )
         password = user_dict.pop("password")
         user_dict["hashed_password"] = self.password_helper.hash(password)
-        user_dict["role_id"] = 1
+        user_dict["role_id"] = role_id
 
         created_user = await self.user_db.create(user_dict)
 
         await self.on_after_register(created_user, request)
 
         return created_user
-
 
 async def get_user_manager(user_db=Depends(get_user_db)):
     yield UserManager(user_db)

@@ -13,6 +13,7 @@ sys.path.append(os.getcwd())
 
 from src.libs.config import Config
 from src.req.auth.models import metadata as auth_metadata
+from src.req.images.models import metadata as images_metadata
 from src.mode import MODE
 
 cfg = Config(MODE)
@@ -44,6 +45,7 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = [
+    images_metadata,
     auth_metadata
 ]
 
