@@ -1,0 +1,36 @@
+@import url("./index.css");
+
+footer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	position: absolute;
+	justify-content: space-between;
+	bottom: 0;
+	padding: 20px;
+	font-family: Fregat;
+	font-weight: normal;
+	font-size: 12pt;
+	left: 0; 
+  	right: 0;
+}
+
+
+
+.footertitle{
+	color: #FFEBA7;
+	left: 0; 
+  	right: 0;
+}
+
+.versionfront{
+	color: #ffffff;
+	left: 0; 
+  	right: 0;
+}
+
+.versionapi{
+	color: #ffffff;
+	left: 0; 
+  	right: 0;
+}

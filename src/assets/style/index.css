@@ -1,9 +1,26 @@
 @font-face {
   font-family: Fregat;
-  src: url('../../assets/fonts/Fregat_bold.otf'),
-  url('../../assets/fonts/Fregat_bold_italic.otf'),
-  url('../../assets/fonts/Fregat_italic.otf'),
-  url('../../assets/fonts/Fregat_regular.otf')
+  src: url('../../assets/fonts/Fregat_regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fregat;
+  src: url('../../assets/fonts/Fregat_bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fregat;
+  src: url('../../assets/fonts/Fregat_bold_italic.otf');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: Fregat;
+  src: url('../../assets/fonts/Fregat_italic.otf');
+  font-weight: normal;
+  font-style: italic;
 }
 
 body{
@@ -18,18 +35,23 @@ body{
 
 .logoplane {
   width: max-content;
-	/* backdrop-filter: blur(5px); */
+  backdrop-filter: blur(10px);
+  vertical-align: middle;
 	padding: 20px;
 	height: max-content;
 	border-radius: 20px;
 	background: rgba(37,37,38,0.43);
 	background-blend-mode: normal;
 	box-shadow: 8px 12px 15px -7px rgb(0, 0, 0);
-  min-height: 53px;}
+  min-height: 54px;
+}
 
 .backg {
   position: fixed;
   filter: blur(60px);
-  height: 100vh;
-  width: 100%;
-  z-index: -1;}
+  left: 0; 
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}

@@ -1,0 +1,11 @@
+@import url("./index.css");
+
+.title{
+	position: absolute;
+	top: 25%;
+	left: 5%;
+	color: #ffffff;
+	font-family: Fregat;
+	font-weight: normal;
+	font-size: 64pt;
+}

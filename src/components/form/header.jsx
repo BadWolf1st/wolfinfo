@@ -26,7 +26,7 @@ function Header(title){
                     </a>
                 </logo>
             </div>
-			<menu_button><Button /></menu_button>
+			<Button/>
         </header>
     );
 }

@@ -1,14 +1,14 @@
 @import url("./index.css");
 
+.buttonbox{
+  width: 44px;
+  /* height: 94px; */
+}
 
 .hamburger {
-	float: right;
-	position: absolute;
+	/* float: right; */
+	/* position: absolute; */
 	/* display: inline-block; */
-    top: 3%;
-    right: 40px;
-    width: 3em;
-    height: 45px;
     z-index: 5;	
   }
   
